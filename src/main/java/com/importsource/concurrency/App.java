@@ -19,14 +19,19 @@ public class App {
         AtomicReferenceFieldUpdater<Dog, String> updater=AtomicReferenceFieldUpdater.newUpdater(Dog.class,String.class,"name");
         Dog dog=new Dog();
         updater.compareAndSet(dog, dog.name, "newdog");
-        
-        
+
+
         System.out.println(dog.name);
-        
+
+
 	}
 
 }
 
+/**
+ * sdf
+ * @author Hezf
+ */
 class Dog{
 	volatile String name="dog1";
 }
